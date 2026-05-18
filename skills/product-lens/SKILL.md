@@ -4,89 +4,89 @@ description: Use this skill to validate the "why" before building, run product d
 origin: ECC
 ---
 
-# Product Lens — Think Before You Build
+# Product Lens — 动手之前，先动脑
 
-This lane owns product diagnosis, not implementation-ready specification writing.
+本 lane 的职责是产品诊断，而非产出可落地的规格说明书。
 
-If the user needs a durable PRD-to-SRS or capability-contract artifact, hand off to `product-capability`.
+如需将产品诊断结果转化为持久的 PRD-to-SRS 或能力契约制品，请转交 `product-capability`。
 
-## When to Use
+## 适用场景
 
-- Before starting any feature — validate the "why"
-- Weekly product review — are we building the right thing?
-- When stuck choosing between features
-- Before a launch — sanity check the user journey
-- When converting a vague idea into a product brief before engineering planning starts
+- 启动任何功能之前 — 验证"为什么做"
+- 每周产品复盘 — 我们在做正确的事情吗？
+- 在多个功能之间难以取舍时
+- 发布之前 — 对用户旅程做最后的理智检查
+- 在工程规划启动前，将模糊想法转化为产品简报
 
-## How It Works
+## 工作流程
 
-### Mode 1: Product Diagnostic
+### 模式 1：产品诊断
 
-Like YC office hours but automated. Asks the hard questions:
-
-```
-1. Who is this for? (specific person, not "developers")
-2. What's the pain? (quantify: how often, how bad, what do they do today?)
-3. Why now? (what changed that makes this possible/necessary?)
-4. What's the 10-star version? (if money/time were unlimited)
-5. What's the MVP? (smallest thing that proves the thesis)
-6. What's the anti-goal? (what are you explicitly NOT building?)
-7. How do you know it's working? (metric, not vibes)
-```
-
-Output: a `PRODUCT-BRIEF.md` with answers, risks, and a go/no-go recommendation.
-
-If the result is "yes, build this," the next lane is `product-capability`, not more founder-theater.
-
-### Mode 2: Founder Review
-
-Reviews your current project through a founder lens:
+类似 YC Office Hours，但全自动化。会抛出以下尖锐问题：
 
 ```
-1. Read README, CLAUDE.md, package.json, recent commits
-2. Infer: what is this trying to be?
-3. Score: product-market fit signals (0-10)
-   - Usage growth trajectory
-   - Retention indicators (repeat contributors, return users)
-   - Revenue signals (pricing page, billing code, Stripe integration)
-   - Competitive moat (what's hard to copy?)
-4. Identify: the one thing that would 10x this
-5. Flag: things you're building that don't matter
+1. 为谁做？（具体到某类真实用户，不是"开发者"这种泛称）
+2. 痛点是什么？（量化：发生频率、严重程度、当前他们怎么凑合？）
+3. 为什么是现在？（什么外部变化让这件事具备了可行性或必要性？）
+4. 10 星版本长什么样？（无限时间/预算下的终极形态）
+5. MVP 是什么？（能验证假设的最小集合）
+6. 反目标是什么？（你明确决定不做什么？）
+7. 怎么衡量做对了？（用指标说话，不凭感觉）
 ```
 
-### Mode 3: User Journey Audit
+输出：一份 `PRODUCT-BRIEF.md`，包含上述答案、风险评估和 go/no-go 建议。
 
-Maps the actual user experience:
+如果结论是 "yes，开干"，下一个 lane 是 `product-capability`，不要再原地反复"创业表演"。
 
-```
-1. Clone/install the product as a new user
-2. Document every friction point (confusing steps, errors, missing docs)
-3. Time each step
-4. Compare to competitor onboarding
-5. Score: time-to-value (how long until the user gets their first win?)
-6. Recommend: top 3 fixes for onboarding
-```
+### 模式 2：创始人视角审查
 
-### Mode 4: Feature Prioritization
-
-When you have 10 ideas and need to pick 2:
+以创始人视角审视当前项目：
 
 ```
-1. List all candidate features
-2. Score each on: impact (1-5) × confidence (1-5) ÷ effort (1-5)
-3. Rank by ICE score
-4. Apply constraints: runway, team size, dependencies
-5. Output: prioritized roadmap with rationale
+1. 阅读 README、CLAUDE.md、package.json、近期 commit 记录
+2. 推断：这个项目试图成为什么？
+3. 打分：产品-市场匹配信号（0-10）
+   - 用户增长轨迹
+   - 留存指标（复购/回访、重复贡献者）
+   - 收入信号（定价页、计费代码、Stripe 集成）
+   - 竞争护城河（什么难以被复制？）
+4. 找出：能让这件事 10x 的那一件事
+5. 标记：你正在做但无关紧要的事
 ```
 
-## Output
+### 模式 3：用户旅程审计
 
-All modes output actionable docs, not essays. Every recommendation has a specific next step.
+绘制真实用户体验地图：
 
-## Integration
+```
+1. 以新用户身份克隆/安装产品
+2. 记录每个摩擦点（困惑步骤、报错、文档缺失）
+3. 给每一步计时
+4. 与竞品 onboarding 体验对比
+5. 评估：time-to-value（用户多久感受到第一次价值？）
+6. 推荐：onboarding 改进 Top 3
+```
 
-Pair with:
-- `/browser-qa` to verify the user journey audit findings
-- `/design-system audit` for visual polish assessment
-- `/canary-watch` for post-launch monitoring
-- `product-capability` when the product brief needs to become an implementation-ready capability plan
+### 模式 4：功能优先级排序
+
+当你有 10 个想法但只能做 2 个时：
+
+```
+1. 列出所有候选功能
+2. 每项打分：影响力 (1-5) × 信心 (1-5) ÷ 投入 (1-5)
+3. 按 ICE 分数排序
+4. 叠加上限约束：资金跑道、团队规模、依赖关系
+5. 产出：带取舍理由的优先级路线图
+```
+
+## 输出
+
+所有模式产出的都是可行动的文档，而非长篇论文。每条建议都附带一个明确的下一步。
+
+## 集成
+
+搭配使用：
+- `/browser-qa` — 验证用户旅程审计中的发现
+- `/design-system audit` — 视觉打磨度评估
+- `/canary-watch` — 发布后监控
+- `product-capability` — 当产品简报需要转化为可落地的能力计划时
