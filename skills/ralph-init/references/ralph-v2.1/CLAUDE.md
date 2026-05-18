@@ -16,7 +16,7 @@
    如果该 story 的 `notes` 字段不为空，说明 Validator 上次验证发现了问题，
    请优先阅读 notes 中的失败原因，针对性地进行修复，而不是重新实现。
 5. 实现该单个 user story,只实现这一个user story的内容
-6. 运行质量检查（例如，typecheck、lint、test - 使用项目所需的任何工具）
+6. 运行局部质量检查（例如：只针对你改动的文件运行 lint、typecheck 或相关的单元测试。**绝对禁止**运行全局或全量的重量级测试，节省时间且聚焦于当前 story）
 7. 如果检查通过，提交所有更改，消息为：`feat: [Story ID] - [Story Title]`
 8. 更新 PRD，将已完成的 story 的 `passes` 设置为 `true`
 9. 每次完成运行后, 将你的进度追加到 `progress.txt`
