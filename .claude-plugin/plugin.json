@@ -1,0 +1,37 @@
+{
+  "name": "rockit",
+  "version": "1.0.0",
+  "description": "RocKit — 鹏的个人全栈开发插件。精选 Claude Code 资产库：50 技能、19 代理、18 命令、28 钩子，覆盖 React/Vue + Python/Node.js + Next/NestJS 全栈工作流",
+  "author": {
+    "name": "鹏",
+    "url": "https://github.com/roc-kit"
+  },
+  "homepage": "https://github.com/roc-kit/rockit",
+  "repository": "https://github.com/roc-kit/rockit",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "agents",
+    "skills",
+    "hooks",
+    "rules",
+    "fullstack",
+    "react",
+    "vue",
+    "python",
+    "nodejs",
+    "nextjs",
+    "nestjs",
+    "tdd",
+    "code-review",
+    "security",
+    "workflow"
+  ],
+  "mcpServers": {},
+  "skills": [
+    "./skills/"
+  ],
+  "commands": [
+    "./commands/"
+  ]
+}

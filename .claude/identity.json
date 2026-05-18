@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "technicalLevel": "technical",
+  "preferredStyle": {
+    "verbosity": "minimal",
+    "codeComments": true,
+    "explanations": true
+  },
+  "domains": [
+    "javascript",
+    "typescript",
+    "python",
+    "react",
+    "vue",
+    "nodejs",
+    "fullstack"
+  ],
+  "createdAt": "2026-05-18T00:00:00.000Z"
+}

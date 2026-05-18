@@ -1,0 +1,47 @@
+{
+  "name": "rockit",
+  "owner": {
+    "name": "鹏"
+  },
+  "metadata": {
+    "description": "个人全栈开发者的 Claude Code 精选插件 — 基于 ECC 精简而来"
+  },
+  "plugins": [
+    {
+      "name": "rockit",
+      "source": "./",
+      "description": "RocKit — 鹏的个人全栈开发插件。50 技能、19 代理、18 命令、28 钩子，专为 React/Vue + Python/Node.js + Next/NestJS 工作流优化",
+      "version": "1.0.0",
+      "author": {
+        "name": "鹏"
+      },
+      "homepage": "https://github.com/roc-kit/rockit",
+      "repository": "https://github.com/roc-kit/rockit",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "fullstack",
+        "react",
+        "vue",
+        "python",
+        "nodejs",
+        "nextjs",
+        "nestjs",
+        "tdd",
+        "code-review"
+      ],
+      "category": "workflow",
+      "tags": [
+        "fullstack",
+        "react",
+        "vue",
+        "python",
+        "nodejs",
+        "tdd",
+        "code-review",
+        "security"
+      ],
+      "strict": false
+    }
+  ]
+}
